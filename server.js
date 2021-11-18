@@ -69,11 +69,8 @@ app.use(
 )
 
 const requireAuth = (req, res, next) => {
-    if (req.session.loggedIn) {
-        next();
-    } else {
-        res.status(403).send('Not Authorized');
-    }
+    
+    next();
 };
 
 app.get('/', requireAuth, (req, res) => {
