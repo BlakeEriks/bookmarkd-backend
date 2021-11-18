@@ -75,6 +75,7 @@ const requireAuth = (req, res, next) => {
 
 app.get('/', requireAuth, (req, res) => {
     // normal function goes here
+    res.send(req.session)
 });
 
 
