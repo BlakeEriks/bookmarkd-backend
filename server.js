@@ -220,6 +220,10 @@ app.get("/logout", async (req, res) => {
     })
 })
 
+app.get("/user", (req, res) => {
+    res.send(req.session)
+})
+
 ///////////////////////////////
 // LISTENER
 ////////////////////////////////
